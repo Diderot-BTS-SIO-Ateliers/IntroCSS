@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feuilles de styles</title>
+    <link rel="stylesheet" id="stylePage">
+    <script>
+        function changeStyleSheet(theme) {
+            document.getElementById('stylePage').setAttribute('href', theme );
+        }
+    </script>
+</head>
+<body>
+    <div class="container wrapper">
+        <div id="top">
+            <h1>Avoir du style...</h1>
+            <p>Vous pouvez choisir celui que vous préférez !</p>
+        </div>
+        <div class="wrapper">
+            <div id="menubar">
+                <ul id="menulist">
+                    <li class="menuitem" onclick='changeStyleSheet("niveau1.css")'>Niveau débutant
+                    <li class="menuitem" onclick='changeStyleSheet("niveau2.css")'>Niveau moyen
+                    <li class="menuitem" onclick='changeStyleSheet("niveau3.css")'>Niveau avancé
+                </ul>
+            </div>
+            <div id="main">
+                <h1>Le même contenu, mais des présentations différentes</h1>
+                <p>Changez le  rendu de votre page HTML, en sélectionnant un élément de menu au choix ou en cliquant sur un des liens suivants :<br>
+                    <a href="#" onclick='changeStyleSheet("niveau1.css")'>débutant</a>,
+                    <a href="#" onclick='changeStyleSheet("niveau2.css")'>moyen</a>,
+                    <a href="#" onclick='changeStyleSheet("niveau3.css")'>avancé</a>.
+                </p>
+                <h2>Sans style !</h2>
+                <p>Il suffit de cliquer <a href="#" onclick="changeStyleSheet();return false">ici</a> pour voir le contenu sans aucune mise en forme.<br/></p>
+            </div>
+            <div id="sidebar">
+                <h3>Les infos spéciales</h3>
+                <p>Ici des informations qu'on veut mettre en avant !</p>
+            </div>
+        </div>
+        <div id="bottom">
+            Le texte qui sera toujours en bas de page.
+        </div>
+    </div>
+</body>
+</html>

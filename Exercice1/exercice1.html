@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ma 1ère page web">
+    <meta name="keywords" content="HTML5,CSS3,JavaScript,PHP">
+    <meta name="author" content="Sophie NABITZ">
+    <title>Introduction à HTML</title>
+    <style>
+        table { text-align: center;
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 250px;}
+        td { border: 1px solid black;}
+        caption {caption-side: bottom;}
+        img {margin-left: 120px; }
+    </style>
+</head>
+<body>
+<h1>Apprendre HTML</h1>
+<hr>
+<p>
+    Voici un petit exercice utilisant les principales fonctionnalités de HTML, préparé par Sophie NABITZ
+</p>
+<p>Tout d'abord, on peut organiser son texte en paragraphe. Le navigateur affiche tout paragraphe précédé et suivi d'un espace vide. Les informations sont automatiquement organisées sur plusieurs lignes en fonction de la taille de l'écran.</p> <pre>Vous pouvez essayer     de taper un texte
+ comme cela,         mais vous remarquez bien que : </pre>Les espaces consécutifs répétés sont tout simplement affichés comme un seul espace. Et les sauts de ligne dans le texte original ne sont pas pris en compte.<br>Pour aller à la ligne, il faut explicitement utiliser une balise &lt;br&gt;
+<p>Vous pouvez évidemment ajouter des caractères spéciaux, par exemple ajouter un petit symbole &copy; après mon nom, mais de toute façon cela ne me fera pas gagner d'&euro; ... Tous les caractères spéciaux peuvent être consultés à cette adresse : <a href="http://alexandre.alapetite.fr/doc-alex/alx_special.html">http://alexandre.alapetite.fr/doc-alex/alx_special.html</a></p>
+<p>Voici les points qui seront abordés dans ce TP :</p>
+<ol>
+    <li>La mise en forme du texte
+        <ul>
+            <li>La mise en gras</li>
+            <li>La mise en italique</li>
+            <li>Le texte barré</li>
+        </ul>
+    </li>
+    <li>Les liens entre pages
+        <ul>
+        <li>Vers une page du même site</li>
+        <li>Vers une page d'un autre site</li>
+            <li>Vers une adresse mail</li>
+            <li>Pour télécharger un fichier</li>
+        </ul>
+    </li>
+    <li>La validation du HTML</li>
+    <li>Les tableaux de données</li>
+    <li>Les images</li>
+</ol>
+Chacun de ces thèmes deviendra un titre du niveau correspondant ... Bien entendu, le titre de la page est de premier niveau.<br>A vous de faire tous les titres maintenant, on complètera le texte par la suite ...
+<h2>La mise en forme du texte</h2><h3>La mise en gras</h3>C'est plutôt facile pour l'instant, il suffit de s'amuser à mettre certains mots en <b>gras</b> ...<h3>La mise en italique</h3>... et d'autres en <i>italique</i> ...<h3>Le texte barré</h3>... et enfin de <del>barrer certaines parties de phrases</del> !<p>Pour la suite, on peut à loisir <u>souligner</u>, mettre en <sup>exposant</sup> ou en <sub>indice</sub>, écrire dans un sens ou <del>en sens inverse</del> ... non, pardon ... <bdo dir="rtl">en sens inverse</bdo>.<br>Pour la couleur ou l'alignement de texte, nous verrons cela plus tard avec les <b>CSS</b>, pour l'instant, nous en sommes encore à l'époque du noir et blanc !
+<h2>Les liens entre pages</h2>
+<h3>Vers une page du même site</h3>Créez une deuxième page dans un fichier autrePage.html, dont le titre est "Ma seconde page". Et maintenant faisons un lien vers cette <a href="autrePage.htm">autre page</a>. N'oubliez pas de prévoir de revenir vers la page actuelle à partir de la page 1...
+<h3>Vers une page d'un autre site</h3>
+<p>Essayez maintenant de définir <a href="https://www.netcampus.fr/" target="_blank">ce lien</a> qui vous permettra de rejoindre l'URL suivante : https://www.netcampus.fr. Il faut que cette page se charge dans un nouvel onglet de votre navigateur.</p>
+<p>Enfin n'oubliez pas que vous pouvez toujours proposer de <a href="#">remonter au début de la page</a> ... ou d'aller <a href="#fin">tout en bas</a> !</p>
+<h2>La validation du HTML</h2>
+<p>Il est temps maintenant de passer à la validation de votre page HTML. Il faudra le faire régulièrement pour être sûr que votre document est bien formé, et que votre code source est valide. Vous pouvez consulter un validateur de code HTML en ligne, par exemple celui à l'adresse http://validator.w3.org/, il devra ne signaler aucune erreur.
+<h2>Les tableaux de données</h2>
+<p>&Eacute;tape suivante : mettons en forme des tableaux de données ...</p>
+<p>Voici les données avec lesquelles nous allons travailler :</p>
+<pre>
+    1    2    3
+    4    5    6
+</pre>
+<p>Pour que les cases du tableau aient toutes une mise en forme convenable, ajoutez les lignes suivantes dans la balise head de votre page :</p>
+    <pre>
+    &lt;style&gt;
+        td {
+            text-align: center;
+            border: 1px solid;
+            width: 50px;
+        }
+    &lt;/style&gt;</pre>
+<p>Une première mise en forme :</p>
+<table>
+    <tr>
+        <td>1</td><td>2</td><td>3</td>
+    </tr>
+    <tr>
+        <td>4</td><td>5</td><td>6</td>
+    </tr>
+</table>
+<p>Et une amélioration :</p>
+<table>
+    <tr>
+        <td>1</td><td>2</td><td>3</td>
+    </tr>
+    <tr>
+        <td>4</td><td>5</td><td>6</td>
+    </tr>
+</table>
+<p>Et maintenant avec un titre :</p>
+<table>
+    <tr><td colspan="3">Titre du tableau</td></tr><tr>
+    <td>1</td><td>2</td><td>3</td>
+</tr>
+    <tr>
+        <td>4</td><td>5</td><td>6</td>
+    </tr>
+</table>
+<p>Et une colonne de plus à gauche :</p>
+<table>
+    <tr><td colspan="4">Titre du tableau</td></tr>
+    <tr>
+        <td rowspan="2">1</td><td>1</td><td >2</td><td>3</td>
+    </tr>
+
+    <tr>
+        <td>4</td><td>5</td><td>6</td>
+    </tr>
+</table>
+<p>Ou au milieu :</p>
+<table>
+    <tr><td colspan="4">Titre du tableau</td></tr>
+    <tr>
+        <td rowspan="2">1</td><td>1</td><td rowspan="2">2</td><td>3</td>
+    </tr>
+
+    <tr>
+        <td>4</td><td>5</td>
+    </tr>
+</table>
+<p>Et enfin un tableau avec une légende (caption)...</p>
+<table>
+    <caption align="bottom">La légende est en dessous !</caption>
+    <tr><td colspan="4">Titre du tableau</td></tr>
+    <tr>
+        <td rowspan="2">1</td><td>1</td><td rowspan="2">2</td><td>3</td>
+    </tr>
+    <tr>
+        <td>4</td><td>5</td>
+    </tr>
+</table>
+<h2>Les images</h2>
+<p>Avant de finir décorons avec <a href="https://wallup.net/wp-content/uploads/2018/10/08/954955-fish-fishes-underwater-ocean-sea-sealife-nature.jpg" target="_blank">une belle image</a> dont la dimension est 240 sur 120 :</p>
+<img src="fishes.jpg" alt="fond sous-marin" width="240" height="120">
+<p>et profitons d'une dernière visite <a href="pageOrange.htm">acidulée</a>
+    <a id="fin"></a></p>
+</body>
+</html>
